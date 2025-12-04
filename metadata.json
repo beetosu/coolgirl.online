@@ -1,0 +1,14 @@
+{
+    "markdown": {
+        "title": "My Test Post",
+        "date": "2025-01-01",
+        "tags": [
+            "alpha",
+            "beta"
+        ]
+    },
+    "web": {
+        "title": "yo MAMA",
+        "fizz": "buzz"
+    }
+}
