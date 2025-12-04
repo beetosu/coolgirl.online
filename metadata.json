@@ -1,5 +1,5 @@
 {
-    "markdown": {
+    "test-markdown": {
         "title": "My Test Post",
         "date": "2025-01-01",
         "tags": [
@@ -7,7 +7,7 @@
             "beta"
         ]
     },
-    "web": {
+    "test-web": {
         "title": "yo MAMA",
         "fizz": "buzz"
     }
