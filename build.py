@@ -77,7 +77,8 @@ def build_all():
             metadata, content_html = parse_html(text)
 
         name_without_ext = filename.rsplit(".", 1)[0]
-        metadata_index[name_without_ext] = metadata
+        if 'test-' not in filename and 'draft-' not in filename:
+            metadata_index[name_without_ext] = metadata
 
         # Build metadata HTML
         metadata_html = "\n    ".join(
