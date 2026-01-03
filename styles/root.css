@@ -1,0 +1,15 @@
+:root {
+    --drawing: brightness(0) invert(19%) sepia(93%) saturate(2000%) hue-rotate(125deg);
+}
+
+body {
+    font-family: Consolas, -apple-system, BlinkMacSystemFont, monospace;
+    width: auto;
+    background-color: #C7E9C0;
+    color: #156937;
+    image-rendering: pixelated;
+
+    a {
+        color: inherit
+    }
+}

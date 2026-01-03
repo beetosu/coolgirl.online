@@ -2,22 +2,21 @@
 <head>
     <title>coolgirl dot online</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/root.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="components/blog-list.js"></script>
+    <script src="components/site-header.js"></script>
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <h1>coolgirl.online 👷‍♀️</h1>
-            <p>under construction</p>
-        </header>
+        <site-header></site-header>
         <main>
-            <ul>
-                <li><a href="/about/">about</a></li>
-            </ul>
-            <img src="/assets/cat.gif" alt="pibble" />
-            <blog-list />
+            <blog-list></blog-list>
+            <div class="guy">
+                <img src="/assets/guy.gif" alt="a little guy" />
+            </div>
+            
         </main>
     </div>
 </body>

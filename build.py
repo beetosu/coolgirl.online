@@ -7,14 +7,8 @@ import markdown
 BASE_DIR = "stubs"
 TEMPLATE_PATH = "components/blog-template.html"
 
-
-### --- LOAD TEMPLATE FILE --- ###
-
 with open(TEMPLATE_PATH, "r", encoding="utf-8") as f:
     HTML_TEMPLATE = f.read()
-
-
-### --- REGEXES --- ###
 
 META_PATTERN = re.compile(
     r"<!--META\s*(.*?)\s*-->",

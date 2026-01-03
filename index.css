@@ -1,38 +1,17 @@
-body {
-    font-family: Consolas, -apple-system, BlinkMacSystemFont, monospace;
-    width: auto;
-    background-color: #C7E9C0;
-    color: #156937;
-    image-rendering: pixelated;
+.wrapper {
+    margin: 10vh auto;
+    max-width: 800px;
 
-    a {
-        color: inherit
-    }
+    main {
+        display: flex;
+        flex-direction: column;
 
-    .wrapper {
-        margin: 10vh auto;
-        max-width: 800px;
-
-        header {
-            text-align: center;
-
-            h1, p {
-                margin: 0;
-            }
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-
+        .guy {
+            align-self: center;
+            
             img {
-                align-self: center;
-                width: 300px;
-                filter: brightness(0) invert(19%) sepia(93%) saturate(2000%) hue-rotate(125deg);
-            }
-
-            blog-list {
-                align-self: end;
+                width: 200px;
+                filter: var(--drawing);
             }
         }
     }
