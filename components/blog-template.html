@@ -1,7 +1,8 @@
 <head>
-    <title>test</title>
+    <title>{{title}} | coolgirl.online</title>
     {{meta}}
     <link rel="stylesheet" href="/styles/root.css">
+    <link rel="stylesheet" href="/styles/blog.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/components/site-header.js"></script>
@@ -9,6 +10,12 @@
 <body>
     <site-header is-link="true"></site-header>
     <main>
+        <h1>{{title}}</h1>
+        <p><i>created {{createdDate}}</i></p>
+        <hr/>
         {{content}}
     </main>
+    <footer>
+        <a href="/">back home</a>
+    </footer>
 </body>

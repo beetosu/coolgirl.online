@@ -1,18 +1,13 @@
-.wrapper {
-    margin: 10vh auto;
-    max-width: 800px;
+main {
+    display: flex;
+    flex-direction: column;
 
-    main {
-        display: flex;
-        flex-direction: column;
-
-        .guy {
-            align-self: center;
-            
-            img {
-                width: 200px;
-                filter: var(--drawing);
-            }
+    .guy {
+        align-self: center;
+        
+        img {
+            width: 200px;
+            filter: var(--drawing);
         }
     }
 }

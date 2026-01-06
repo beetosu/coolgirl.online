@@ -9,8 +9,13 @@ class SiteHeader extends HTMLElement {
             header {
                 text-align: center;
 
-                h1, p {
+                p {
                     margin: 0;
+                }
+
+                .site-name {
+                    font-size: 32px;
+                    font-weight: bold;
                 }
 
                 img {
@@ -44,7 +49,7 @@ class SiteHeader extends HTMLElement {
         }
 
         titleElement.innerHTML = `
-            <h1>coolgirl.online</h1>
+            <p class="site-name">coolgirl.online</p>
             <img src="/assets/coolgirl.png"/>
         `;
 

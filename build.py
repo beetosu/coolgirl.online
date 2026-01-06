@@ -4,7 +4,7 @@ import yaml
 import json
 import markdown
 
-BASE_DIR = "stubs"
+BASE_DIR = "writings"
 TEMPLATE_PATH = "components/blog-template.html"
 
 with open(TEMPLATE_PATH, "r", encoding="utf-8") as f:
@@ -74,13 +74,7 @@ def build_all():
         if 'test-' not in filename and 'draft-' not in filename:
             metadata_index[name_without_ext] = metadata
 
-        # Build metadata HTML
-        metadata_html = "\n    ".join(
-            f'<meta name="{k}" content="{v}">' for k, v in metadata.items()
-        )
-
-        # Insert into template
-        final_html = HTML_TEMPLATE.replace("{{meta}}", metadata_html).replace("{{content}}", content_html)
+        final_html = apply_metadata_to_html(metadata, content_html)
 
         output_filename = name_without_ext + ".html"
         output_path = os.path.join("blog", output_filename)
@@ -96,6 +90,27 @@ def build_all():
         json.dump(metadata_index, f, indent=4, default=serialize_metadata)
 
     print("Wrote metadata.json")
+
+def apply_metadata_to_html(metadata, content_html):
+    # Build metadata HTML
+    metadata_html = "\n    ".join(
+        f'<meta name="{k}" content="{v}">' for k, v in metadata.items()
+    )
+
+    # Insert into template
+    html = HTML_TEMPLATE.replace("{{meta}}", metadata_html).replace("{{content}}", content_html)
+
+    if 'title' in metadata:
+        html = html.replace("{{title}}", metadata['title'])
+    else:
+        html = html.replace("{{title}}", "Untitled")
+
+    if 'created-date' in metadata:
+        html = html.replace("{{createdDate}}", metadata['created-date'])
+    else:
+        html = html.replace("{{createdDate}}", "At some point")
+    
+    return html
 
 def serialize_metadata(obj):
     if hasattr(obj, "isoformat"):
