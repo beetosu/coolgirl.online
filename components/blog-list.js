@@ -46,7 +46,7 @@ function buildBloglist(blogs, shadow) {
             link = document.createElement('a');
         
         link.href = `/blog/${url}.html`
-        link.textContent = blog.date ? `${blog.date} - ${blog.title}` : blog.title; // Assuming each blog object has a "title" property
+        link.textContent = blog['created-date'] ? `${blog['created-date']} - ${blog.title}` : blog.title; // Assuming each blog object has a "title" property
         li.appendChild(link);
         ul.appendChild(li);
     });
