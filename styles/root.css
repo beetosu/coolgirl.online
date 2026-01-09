@@ -8,7 +8,7 @@ body {
     background-color: #C7E9C0;
     color: #156937;
     margin: 5vh auto;
-    max-width: 800px;
+    max-width: min(95vw, 800px);
     width: auto;
 
     a {
