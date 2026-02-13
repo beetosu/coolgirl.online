@@ -3,6 +3,8 @@ import re
 import yaml
 import json
 import markdown
+import argparse
+import time
 
 BASE_DIR = "writings"
 TEMPLATE_PATH = "components/blog-template.html"
@@ -39,6 +41,7 @@ def parse_markdown(file_text):
 def parse_html(file_text):
     metadata = {}
     meta_match = META_PATTERN.search(file_text)
+    content = file_text
     if meta_match:
         meta_text = meta_match.group(1).strip()
         # Each line is key: value
@@ -100,15 +103,14 @@ def apply_metadata_to_html(metadata, content_html):
     # Insert into template
     html = HTML_TEMPLATE.replace("{{meta}}", metadata_html).replace("{{content}}", content_html)
 
-    if 'title' in metadata:
-        html = html.replace("{{title}}", metadata['title'])
-    else:
-        html = html.replace("{{title}}", "Untitled")
+    html = html.replace("{{title}}", metadata.get('title', "Untitled"))
 
-    if 'created-date' in metadata:
-        html = html.replace("{{createdDate}}", metadata['created-date'])
+    if 'subtitle' in metadata:
+        html = html.replace("{{subtitle}}", f"<p class=\"subtitle\">{metadata['subtitle']}<p>")
     else:
-        html = html.replace("{{createdDate}}", "At some point")
+        html = html.replace("{{subtitle}}", "")
+
+    html = html.replace("{{createdDate}}", metadata.get('created-date', "At some point"))
     
     return html
 
@@ -118,4 +120,18 @@ def serialize_metadata(obj):
     raise TypeError(f"Type {type(obj)} not serializable")
 
 if __name__ == "__main__":
-    build_all()
+    parser = argparse.ArgumentParser(description="Build site content; use -w to watch")
+    parser.add_argument("-w", "--watch", action="store_true", help="Run build repeatedly in watch mode")
+    parser.add_argument("-n", "--interval", type=int, default=30, help="Seconds between builds in watch mode (default: 30)")
+    args = parser.parse_args()
+
+    if args.watch:
+        try:
+            print(f"Entering watch mode (interval={args.interval}s). Press Ctrl-C to stop.")
+            while True:
+                build_all()
+                time.sleep(args.interval)
+        except KeyboardInterrupt:
+            print("Stopping watch mode.")
+    else:
+        build_all()

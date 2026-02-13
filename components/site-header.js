@@ -8,6 +8,7 @@ class SiteHeader extends HTMLElement {
         sheet.replaceSync(`
             header {
                 text-align: center;
+                margin-bottom: 5vh;
 
                 p {
                     margin: 0;

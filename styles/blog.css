@@ -1,15 +1,14 @@
-header {
-    margin-top: 5vh;
-}
-
 main {
     background-color: #dff8e5;
     color: #222;
     border-radius: 8px;
-    margin-top: 1rem;
-    padding: 1rem .5rem;
+    padding: .5rem;
 }
 
 footer {
     margin-top: 2rem;
+}
+
+.subtitle {
+    font-style: italic;
 }
