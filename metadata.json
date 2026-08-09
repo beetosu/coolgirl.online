@@ -1,7 +1,6 @@
 {
-    "profile-picture": {
-        "title": "Please Let Me Use The Profile Picture I Want",
-        "created-date": "2026-01-05",
-        "css": "profile-picture.css"
+    "monday": {
+        "title": "The Week Starts on Monday",
+        "created-date": "2026-08-09"
     }
 }

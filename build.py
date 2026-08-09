@@ -110,7 +110,13 @@ def apply_metadata_to_html(metadata, content_html):
     else:
         html = html.replace("{{subtitle}}", "")
 
-    html = html.replace("{{createdDate}}", metadata.get('created-date', "At some point"))
+    created_date = metadata.get('created-date')
+    if created_date:
+        created_date = created_date.strftime("%B %d, %Y")
+    else:
+        created_date = "At some point"
+
+    html = html.replace("{{createdDate}}", created_date)
     
     return html
 
