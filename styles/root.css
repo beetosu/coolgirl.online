@@ -1,12 +1,12 @@
 :root {
     --drawing: brightness(0) invert(19%) sepia(93%) saturate(2000%) hue-rotate(125deg);
-    font-family: Consolas, -apple-system, BlinkMacSystemFont, monospace;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     image-rendering: pixelated;
 }
 
 body {
-    background-color: #C7E9C0;
-    color: #156937;
+    background-color: #c0e9de;
+    color: #499f9c;
     margin: 5vh auto;
     max-width: min(95vw, 800px);
     width: auto;

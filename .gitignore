@@ -1,3 +1,5 @@
 /blog
 *test*
 *draft*
+__pycache__
+.vscode
