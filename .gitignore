@@ -2,4 +2,5 @@
 *test*
 *draft*
 __pycache__
-.vscode
+.vscode/
+.venv/
