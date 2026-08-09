@@ -51,7 +51,6 @@ class SiteHeader extends HTMLElement {
 
         titleElement.innerHTML = `
             <p class="site-name">coolgirl.online</p>
-            <img src="/assets/coolgirl.png"/>
         `;
 
         this.headerElement.replaceChildren(titleElement);
