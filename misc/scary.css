@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'HauntingEleanor';
+  src: url('fonts/HauntingEleanor-Regular.ttf') format('truetype');
+}
+
+body {
+    width: 100vw;
+    background-color: #11301c;
+    color: #eee;
+}
+
+h1, h2 {
+    font-family: 'HauntingEleanor', serif;
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+meter::-webkit-meter-optimum-value {
+    background: purple;
+}
+
+/* Firefox */
+meter::-moz-meter-bar {
+    background: purple;
+}
+
+header {
+    text-align: center;
+
+    h1 {
+        
+        font-size: 48px;
+        margin-bottom: 8px;
+        color: #fff;
+        text-shadow: 
+            0 0 5px #fff200,
+            0 0 10px #fff2003a;
+    }
+
+    p {
+        margin-top: 0
+    }
+}
+
+main {
+    width: min(600px, 90vw);
+    margin: auto;
+
+    h2 {
+        margin-top: 0;
+        text-shadow: 
+            0 0 5px #fff20072;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    .movie {
+        display: flex;
+        gap: 8px;
+        padding: 8px;
+        border-radius: 4px;
+        background-color: #8080803a;
+        margin-bottom: 24px;
+    }
+}
