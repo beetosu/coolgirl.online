@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'HauntingEleanor';
-  src: url('fonts/HauntingEleanor-Regular.ttf') format('truetype');
+  font-family: 'Slinging Wake';
+  src: url('fonts/SwingingWake-Regular.ttf') format('truetype');
 }
 
 body {
@@ -9,18 +9,8 @@ body {
     color: #eee;
 }
 
-h1, h2 {
-    font-family: 'HauntingEleanor', serif;
-}
-
-/* WebKit browsers (Chrome, Safari, Edge) */
-meter::-webkit-meter-optimum-value {
-    background: purple;
-}
-
-/* Firefox */
-meter::-moz-meter-bar {
-    background: purple;
+h1, h2, a {
+    font-family: 'Slinging Wake', serif;
 }
 
 header {
@@ -41,6 +31,15 @@ header {
     }
 }
 
+a {
+    font-family: 'Slinging Wake', serif;
+    color: #fff;
+    text-shadow: 
+        0 0 1px #fff200,
+        0 0 10px #fff2003a;
+    letter-spacing: 1.5px;
+}
+
 main {
     width: min(600px, 90vw);
     margin: auto;
@@ -57,10 +56,28 @@ main {
 
     .movie {
         display: flex;
-        gap: 8px;
+        gap: 16px;
         padding: 8px;
         border-radius: 4px;
         background-color: #8080803a;
         margin-bottom: 24px;
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            hr {
+                width: 100%;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            .desc {
+                flex: 1
+            }
+        }
     }
 }
