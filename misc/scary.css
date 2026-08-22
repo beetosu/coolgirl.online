@@ -4,7 +4,6 @@
 }
 
 body {
-    width: 100vw;
     background-color: #11301c;
     color: #eee;
 }
@@ -79,5 +78,14 @@ main {
                 flex: 1
             }
         }
+    }
+}
+
+@media (width < 1000px) {
+    main img {
+        width: min(20vw, 200px);
+        min-height: 300px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
     }
 }
