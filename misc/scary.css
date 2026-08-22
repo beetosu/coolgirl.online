@@ -4,7 +4,10 @@
 }
 
 body {
-    background-color: #11301c;
+    background: #020024;
+    background: 
+        radial-gradient(circle 125px at 80% 10%, rgba(234, 255, 0, 0.8), transparent),
+        linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgb(4, 4, 48) 96%, rgba(0, 107, 20, 1) 100%);
     color: #eee;
 }
 
@@ -78,14 +81,34 @@ main {
                 flex: 1
             }
         }
+
+        &.last {
+            margin-bottom: 100px;
+        }
     }
 }
 
 @media (width < 1000px) {
+    body {
+        background: 
+        radial-gradient(circle 125px at 110% 10%, rgba(234, 255, 0, 0.8), transparent),
+        linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgb(4, 4, 48) 96%, rgba(0, 107, 20, 1) 100%);
+    }
+
     main img {
         width: min(20vw, 200px);
         min-height: 300px;
         aspect-ratio: 16 / 9;
         object-fit: cover;
     }
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    background: linear-gradient(transparent, #aaa);
 }
