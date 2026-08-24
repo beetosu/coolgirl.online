@@ -34,7 +34,6 @@ header {
 }
 
 a {
-    font-family: 'Slinging Wake', serif;
     color: #fff;
     text-shadow: 
         0 0 1px #fff200,
@@ -101,32 +100,31 @@ main {
 
 footer img {
     animation: moveRight 3s linear infinite;
+    object-fit: cover;
+    object-position: center;
 }
 
 @keyframes moveRight {
   0% {
-    transform: translateX(5vw) scaleX(1);
+    transform: translateX(calc(5vw - 67.5px)) scaleX(1);
   }
   50% {
-    transform: translateX(90vw) scaleX(1);
+    transform: translateX(calc(95vw - 125px)) scaleX(1);
   }
   50.001% {
-    transform: translateX(90vw) scaleX(-1);
+    transform: translateX(calc(95vw - 67.5px)) scaleX(-1);
   }
   100% {
     transform: translateX(5vw) scaleX(-1);
   }
-  100.001% {
-    transform: translateX(5vw) scaleX(1);
-  }
 }
 
 body::after {
-  content: "";
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  height: 25dvh;
-  width: 100%;
-  background: linear-gradient(transparent, #aaa);
+    content: "";
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 25dvh;
+    width: 100%;
+    background: linear-gradient(transparent, #aaa);
 }
