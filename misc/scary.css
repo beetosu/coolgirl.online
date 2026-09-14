@@ -46,7 +46,7 @@ main {
     margin: auto;
     display: grid;
     width: min(800px, 100vw);
-    padding-top: 20px;
+    padding-top: 45px;
 
     h2 {
         margin: 0;
