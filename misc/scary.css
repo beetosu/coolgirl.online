@@ -9,6 +9,7 @@ body {
         radial-gradient(circle 125px at 80% 10%, rgba(234, 255, 0, 0.8), transparent),
         linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgb(4, 4, 48) 96%, rgba(0, 107, 20, 1) 96.1%, rgba(0, 107, 20, 1) 100%);
     color: #eee;
+    margin: 0;
 }
 
 h1, h2, a {
@@ -44,8 +45,7 @@ a {
 main {
     margin: auto;
     display: grid;
-    width: min(800px, 95vw);
-    overflow-x: hidden;
+    width: min(800px, 100vw);
     padding-top: 20px;
 
     h2 {
@@ -85,6 +85,11 @@ main {
     .movies {
         grid-column: 1;
         grid-row: 1;
+    }
+
+    .movies {
+        justify-self: center;
+        width: min(760px, 95vw);
     }
 
     .movie {
@@ -127,6 +132,7 @@ main {
     }
 
     main {
+        overflow-x: hidden;
         .movie img {
             width: min(20vw, 200px);
             min-height: 300px;
