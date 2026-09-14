@@ -59,6 +59,7 @@ main {
         display: flex;
         flex-direction: column;
         gap: 125px;
+        pointer-events: none;
 
         img {
             width: 150px;
