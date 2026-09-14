@@ -192,3 +192,27 @@ body::after {
     background: linear-gradient(transparent, #aaa);
     z-index: 5;
 }
+
+meter {
+    appearance: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+/* Chrome, Edge, Safari */
+meter::-webkit-meter-bar {
+  background: #e0e0e0; /* track background */
+  border-radius: 4px;
+}
+
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+  background: orange;
+  border-radius: 4px;
+}
+
+/* Firefox */
+meter::-moz-meter-bar {
+  background: orange;
+}
